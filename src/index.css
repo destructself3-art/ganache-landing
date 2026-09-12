@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #000;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink font-sans text-cream antialiased;
+    /* Мелкий текст на одно начертание плотнее regular — правка из видео. */
+    font-weight: 500;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: #c9a36a;
+    color: #000;
+  }
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* Подписи капсом. */
+  .caps {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  /* Крупный тонкий капс: белый в центре, чуть темнее к краям. */
+  .text-sheen {
+    background: linear-gradient(90deg, #9d938a 0%, #f4efe8 28%, #fff 50%, #f4efe8 72%, #9d938a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Кастомный курсор прячет системный только там, где он включён (мышь, без reduced-motion). */
+.has-cursor,
+.has-cursor * {
+  cursor: none !important;
+}
+
+/* Ховер «перелистывание» (RollText). Высота строки фиксирована в em,
+   поэтому буква уезжает ровно на одну строку, а не наполовину. */
+.roll {
+  position: relative;
+  display: inline-flex;
+}
+.roll__chars {
+  display: inline-flex;
+  overflow: hidden;
+  height: 1.25em;
+  line-height: 1.25em;
+}
+.roll__char {
+  display: inline-flex;
+  flex-direction: column;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i) * 16ms);
+}
+.roll__char > span {
+  display: block;
+  height: 1.25em;
+}
+:is(a, button, .roll-host):is(:hover, :focus-visible) .roll__char {
+  transform: translateY(-1.25em);
+}
+
+/* Бегущая строка (Marquee): две одинаковые ленты, сдвиг на половину — бесшовно. */
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+.marquee__row {
+  display: flex;
+  flex-shrink: 0;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Плёночное зерно поверх всего сайта. */
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roll__char {
+    transition: none;
+  }
+  .marquee__track {
+    animation: none;
+  }
+}

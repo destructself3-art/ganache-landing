@@ -1,0 +1,203 @@
+{
+  "boutique": {
+    "w": 1122,
+    "h": 1402,
+    "alpha": false,
+    "widths": [
+      640,
+      1122
+    ]
+  },
+  "cacao": {
+    "w": 1254,
+    "h": 1254,
+    "alpha": true,
+    "widths": [
+      640,
+      1254
+    ]
+  },
+  "card-pour": {
+    "w": 1122,
+    "h": 1402,
+    "alpha": false,
+    "widths": [
+      640,
+      1122
+    ]
+  },
+  "footer-stones": {
+    "w": 1536,
+    "h": 594,
+    "alpha": true,
+    "widths": [
+      640,
+      1280,
+      1536
+    ]
+  },
+  "hero-closed-cut": {
+    "w": 1672,
+    "h": 941,
+    "alpha": true,
+    "widths": [
+      640,
+      1280,
+      1672
+    ]
+  },
+  "hero-closed": {
+    "w": 1672,
+    "h": 941,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1672
+    ]
+  },
+  "hero-mobile-cut": {
+    "w": 941,
+    "h": 1672,
+    "alpha": true,
+    "widths": [
+      640,
+      941
+    ]
+  },
+  "hero-mobile": {
+    "w": 941,
+    "h": 1672,
+    "alpha": false,
+    "widths": [
+      640,
+      941
+    ]
+  },
+  "hero-open-cut": {
+    "w": 1672,
+    "h": 941,
+    "alpha": true,
+    "widths": [
+      640,
+      1280,
+      1672
+    ]
+  },
+  "hero-open": {
+    "w": 1672,
+    "h": 941,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1672
+    ]
+  },
+  "hero-tablet-cut": {
+    "w": 1086,
+    "h": 1448,
+    "alpha": true,
+    "widths": [
+      640,
+      1086
+    ]
+  },
+  "hero-tablet": {
+    "w": 1086,
+    "h": 1448,
+    "alpha": false,
+    "widths": [
+      640,
+      1086
+    ]
+  },
+  "lab": {
+    "w": 1122,
+    "h": 1402,
+    "alpha": false,
+    "widths": [
+      640,
+      1122
+    ]
+  },
+  "menu-cherry": {
+    "w": 1448,
+    "h": 1086,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1448
+    ]
+  },
+  "menu-praline": {
+    "w": 1448,
+    "h": 1086,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1448
+    ]
+  },
+  "menu-signature": {
+    "w": 1370,
+    "h": 1148,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1370
+    ]
+  },
+  "menu-yuzu": {
+    "w": 1448,
+    "h": 1086,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1448
+    ]
+  },
+  "praline": {
+    "w": 1254,
+    "h": 1254,
+    "alpha": true,
+    "widths": [
+      640,
+      1254
+    ]
+  },
+  "stack-glaze": {
+    "w": 1448,
+    "h": 1086,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1448
+    ]
+  },
+  "stack-night": {
+    "w": 1448,
+    "h": 1086,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1448
+    ]
+  },
+  "stack-notebook": {
+    "w": 1536,
+    "h": 1024,
+    "alpha": false,
+    "widths": [
+      640,
+      1280,
+      1536
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+node_modules
+dist
+
+# Сырые PNG не храним в общем репозитории (~50 МБ): сайту нужны только webp из public/media.
+# Как из исходников получить media-src и public/media — описано в PROMPTS.md.
+/1/
+/БЛОКИ/
+/ПЛАШКИ/
+/Меню, 4 торта · 45 · 2k/
+/ФУТЕР
+media-src/
+*.local
+.DS_Store
